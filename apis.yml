@@ -1,21 +1,55 @@
 aid: knight-fintech
 name: Knight Fintech
-description: 'Knight Fintech is a company surfaced as a portfolio company of accel and added to the API
-  Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Knight Fintech is a Mumbai-based banking technology company that sells digital lending
+  infrastructure to Indian banks and NBFCs. It positions itself as "India's leading digital
+  lending infrastructure platform", stating it powers 500+ financial institutions across
+  co-lending, digital lending, treasury management, supply chain finance, embedded finance
+  and credit line on UPI, alongside a Knight Aurix product line. The company describes its
+  approach as cloud-first, API-driven middleware that integrates with legacy core banking
+  systems without displacing them. It is enterprise sales-led: there is no public developer
+  portal, no published API documentation, no SDKs and no self-service signup — evaluation
+  runs through a scheduled demo.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://knightfintech.com/assets/KnightFintechLogo-DHHZZVhG.svg
 url: https://raw.githubusercontent.com/api-evangelist/knight-fintech/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - accel
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: no-public-api-surface
+x-enrichment-note: >-
+  Enriched 2026-07-19. Knight Fintech publishes no public API artifacts: no developer or docs
+  subdomain resolves, no OpenAPI/AsyncAPI/GraphQL spec, no llms.txt, no well-known documents,
+  no packages on npm/PyPI/Maven/NuGet/RubyGems/crates.io, and no GitHub organization. The web
+  host returns HTTP 200 with an identical SPA shell for every path, so path probes there are
+  not evidence of existence (see well-known/knight-fintech-well-known.yml). The real findings
+  this round were the company's published certifications and its domain security posture.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Enterprise
+- Financial Services
+- Banking
+- Lending
+- Fintech
+- Treasury Management
+- Embedded Finance
+- Supply Chain Finance
+- India
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +58,39 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.knightfintech.com/
+  url: https://knightfintech.com/
+- type: About
+  url: https://knightfintech.com/about-us
+- type: Blog
+  url: https://knightfintech.com/knowledge-center
+- type: FAQ
+  url: https://knightfintech.com/faq
+- type: Contact
+  url: https://knightfintech.com/contact-us
+- type: Demo
+  url: https://knightfintech.com/schedule-a-demo
+- type: TermsOfService
+  url: https://knightfintech.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://knightfintech.com/privacy-policy
+- type: Compliance
+  url: security/knight-fintech-trust-center.yml
+- type: TrustCenter
+  url: security/knight-fintech-trust-center.yml
+- type: DomainSecurity
+  url: security/knight-fintech-domain-security.yml
+- type: WellKnown
+  url: well-known/knight-fintech-well-known.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/knightfintech
+- type: Twitter
+  url: https://x.com/knightfintech
+- type: Instagram
+  url: https://www.instagram.com/knightfintech/
+- type: Email
+  url: mailto:support@knightfintech.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
