@@ -1,0 +1,80 @@
+generated: '2026-07-19'
+method: probed
+source: live HTTP probes of knightfintech.com and www.knightfintech.com
+name: Knight Fintech Well-Known Index
+description: >-
+  Probe of standard /.well-known/ discovery paths across the Knight Fintech web
+  properties. No well-known artifacts are published. The host serves a
+  single-page-application catch-all that returns HTTP 200 with the same 3,834-byte
+  HTML shell (Content-Type text/html) for EVERY path, including control paths that
+  are known not to exist. A 200 from this host is therefore not evidence that a
+  resource exists. All entries below are recorded as soft_404.
+verification:
+  method: control-path comparison
+  control_path: /this-path-does-not-exist-zzz999
+  control_status: 200
+  control_bytes: 3834
+  control_content_type: text/html
+  conclusion: >-
+    Host returns 200 + identical SPA shell for all unknown paths. Any 200 whose body
+    matches the shell byte-length and content type is treated as a soft 404 (not found).
+hosts:
+- host: knightfintech.com
+  paths:
+  - path: /.well-known/security.txt
+    status: 200
+    result: soft_404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    result: soft_404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    result: soft_404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    result: soft_404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    result: soft_404
+    file: null
+  - path: /llms.txt
+    status: 200
+    result: soft_404
+    file: null
+  - path: /openapi.json
+    status: 200
+    result: soft_404
+    file: null
+  - path: /swagger.json
+    status: 200
+    result: soft_404
+    file: null
+- host: www.knightfintech.com
+  note: Identical soft-404 behavior to the apex domain on all paths probed above.
+  paths: []
+- host: knighthome-api.knightfintech.com
+  note: >-
+    First-party backend host referenced by the marketing site JavaScript bundle
+    (assets/index-CrLbvaMm.js). Unlike the web host this origin returns real 404s and
+    302s, so its responses are trustworthy. It exposes no API description: /openapi.json
+    and /swagger.json return 404; /v3/api-docs, /docs, /api-docs, /health and /actuator
+    return 302 redirects. It appears to serve the marketing site's own lead-capture
+    backend and is NOT a documented public product API.
+  paths:
+  - path: /openapi.json
+    status: 404
+    result: not_found
+    file: null
+  - path: /swagger.json
+    status: 404
+    result: not_found
+    file: null
+  - path: /v3/api-docs
+    status: 302
+    result: redirect
+    file: null
+found: 0
