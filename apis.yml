@@ -36,7 +36,7 @@ x-enrichment-note: >-
   host returns HTTP 200 with an identical SPA shell for every path, so path probes there are
   not evidence of existence (see well-known/knight-fintech-well-known.yml). The real findings
   this round were the company's published certifications and its domain security posture.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
