@@ -55,7 +55,7 @@ modified: '2026-07-19'
 tags:
 - Company
 - Enterprise
-- Financial-Services
+- Financial Services
 - Banking
 - Lending
 - Fintech
@@ -74,6 +74,7 @@ tags_raw:
 - Embedded Finance
 - Supply Chain Finance
 - India
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
